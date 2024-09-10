@@ -1,3 +1,9 @@
+@import "./geist.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: 'Geist Sans', sans-serif;
+}
