@@ -10,11 +10,4 @@ export default defineConfig({
     }),
     react(),
   ],
-  server: {
-    host: "0.0.0.0",
-    hmr: {
-      host: "localhost",
-      clientPort: 5174, // The exposed port of your `app` service
-    },
-  },
 });
