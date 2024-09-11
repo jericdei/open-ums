@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Address;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -34,6 +35,8 @@ return new class extends Migration
             $table->string('ethnic_group')->nullable();
             $table->string('phone');
             $table->string('telephone')->nullable();
+            $table->foreignIdFor(Address::class, 'permanent_address_id');
+            $table->foreignIdFor(Address::class, 'present_address_id');
             $table->timestamps();
         });
     }

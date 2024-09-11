@@ -11,6 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
+        if (Schema::hasTable('regions')) {
+            return;
+        }
+
         Schema::create('regions', function (Blueprint $table) {
             $table->string('code')->primary();
             $table->string('old_code')->nullable();
@@ -25,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('regions');
+        // Schema::dropIfExists('regions');
     }
 };
